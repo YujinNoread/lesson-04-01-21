@@ -7,14 +7,7 @@ let value1 = [7, 1, 2, 3, 4, 8, 4, 3, 5, 6, 8, 7, 9]
 console.log(`Input: [${value1}]`)
 
 function dd(array) {
-    if (Array.isArray(array)) {
-        return [...new Set([...array])];
-    } else {
-        console.log("Input value not array");
-        return 0;
-    }
-    // return result = Array.of(...new Set(Array.of(...array)));
-    // return result = Array.from(new Set(array));
+    return (Array.isArray(array)) ? [...new Set([...array])] : 0;
 }
 
 console.log(`Output: [${dd(value1)}]`)
